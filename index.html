@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Калькулятор зарплаты | НДФЛ 13%</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="calculator__header">
+        <h1 class="calculator__title">Калькулятор зарплаты</h1>
+        <p class="calculator__subtitle">НДФЛ 13% · ТК РФ</p>
+      </div>
+
+      <div class="calculator__content">
+        <div class="mode-switch">
+          <button class="mode-switch__btn" data-mode="netToGross">
+            На руки → Оклад
+          </button>
+          <button class="mode-switch__btn" data-mode="grossToNet">
+            Оклад → На руки
+          </button>
+        </div>
+
+        <div id="modeDescription" class="calculator__description">
+          Режим: «На руки → Оклад» — введите желаемую сумму после вычета налога.
+        </div>
+
+        <div class="input-group">
+          <label for="amountInput" id="inputLabel" class="input-group__label"
+            >Сумма на руки (чистыми), ₽</label
+          >
+          <div class="input-group__wrapper">
+            <span class="input-group__currency">₽</span>
+            <input
+              type="text"
+              id="amountInput"
+              class="input-group__field"
+              placeholder=""
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <div class="calculator__actions">
+          <button id="calcButton" class="btn btn--primary">Рассчитать</button>
+          <button id="exportMdButton" class="btn btn--secondary">
+            Выгрузить сумму в MD
+          </button>
+        </div>
+
+        <div class="result-card">
+          <div class="result-card__title">РЕЗУЛЬТАТ РАСЧЁТА</div>
+          <div id="resultDynamic" class="result-card__content">
+            <div class="result-card__placeholder">
+              введите сумму и нажмите «Рассчитать»
+            </div>
+          </div>
+        </div>
+
+        <div class="calculator__reset">
+          <button id="resetBtn" class="reset-btn">Сбросить</button>
+        </div>
+      </div>
+
+      <div class="calculator__footer">
+        НДФЛ 13% — стандартная ставка для налоговых резидентов РФ.
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
