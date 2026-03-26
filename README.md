@@ -6,6 +6,9 @@
 
 ### Веб-версия
 
+[ТЫК](https://nihaochingiz.github.io/salary-calculator/)
+
+
 #### Как запустить:
 
 1. Сохраните три файла в одну папку:
